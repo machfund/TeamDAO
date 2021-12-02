@@ -1,0 +1,317 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"version","type":"bytes"},
+				{"name":"publisher","type":"bytes"},
+				{"name":"key","type":"bytes"},
+				{"name":"author","type":"bytes"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"bytes"},
+				{"name":"language","type":"bytes"},
+				{"name":"dabi","type":"bytes"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "debotEntryPoint",
+			"inputs": [
+				{"name":"addrLLCWallet","type":"address"},
+				{"name":"addrMultisig","type":"address"},
+				{"name":"addrLLCService","type":"address"},
+				{"name":"addrLLCServiceDebot","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getLLCWalletInfo",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExtLLCWallet",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExtLLCWalletCb",
+			"inputs": [
+				{"name":"custodians","type":"map(address,uint32)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "goToWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mainMenu",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "changeCustodians",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "menuCustodians",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deleteCustodian",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addCustodianAddress",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addCustodianShare",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveNewCustodian",
+			"inputs": [
+				{"name":"value","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkProposalParams",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createProposal",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "succeessCreateProposal",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getProposals",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getProposalsCb",
+			"inputs": [
+				{"components":[{"name":"creator","type":"address"},{"name":"oldCustodians","type":"map(address,uint32)"},{"name":"newCustodians","type":"map(address,uint32)"},{"name":"votesFor","type":"uint128"},{"name":"votesAgainst","type":"uint128"},{"name":"votesTotal","type":"uint128"},{"name":"votesNeeded","type":"uint128"},{"name":"start","type":"uint32"},{"name":"end","type":"uint32"}],"name":"proposals","type":"tuple[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getProposalInfo",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mappingToString",
+			"inputs": [
+				{"name":"map","type":"map(address,uint32)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mappingVoteToString",
+			"inputs": [
+				{"name":"map","type":"map(address,bool)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkIfVoted",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "printVotes",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getVotes",
+			"inputs": [
+				{"name":"functionId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "votesToTerminal",
+			"inputs": [
+				{"name":"votes","type":"map(uint32,map(address,bool))"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "vote",
+			"inputs": [
+				{"name":"votes","type":"map(uint32,map(address,bool))"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveVote",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "successVote",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "attachMultisig",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveMultisig",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"state","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"bytes"},
+				{"name":"targetAbi","type":"bytes"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

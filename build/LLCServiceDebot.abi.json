@@ -1,0 +1,291 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "init",
+			"inputs": [
+				{"name":"addrLLCService","type":"address"},
+				{"name":"addrLLCWalletDebot","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "serviceEntryPoint",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"version","type":"bytes"},
+				{"name":"publisher","type":"bytes"},
+				{"name":"key","type":"bytes"},
+				{"name":"author","type":"bytes"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"bytes"},
+				{"name":"language","type":"bytes"},
+				{"name":"dabi","type":"bytes"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExt",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExtLLCServiceCb",
+			"inputs": [
+				{"name":"staticDeployFee","type":"uint128"},
+				{"name":"deployedWalletsCounter","type":"uint32"},
+				{"name":"addrAdmin","type":"address"},
+				{"name":"feeReciever","type":"address"},
+				{"name":"currentBalance","type":"uint128"},
+				{"name":"distributionFee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "mainMenu",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createLLCWallet",
+			"inputs": [
+				{"name":"index","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addCustodianAddress",
+			"inputs": [
+				{"name":"index","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveCustodianAddress",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveCustodianShare",
+			"inputs": [
+				{"name":"value","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "chooseDeleteCustodian",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "menuCustodians",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deleteCustodian",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkLLCMultisigParams",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployLLCWallet",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "successDeployLLCWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExt1",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExtLLCServiceCb1",
+			"inputs": [
+				{"name":"staticDeployFee","type":"uint128"},
+				{"name":"deployedWalletsCounter","type":"uint32"},
+				{"name":"addrAdmin","type":"address"},
+				{"name":"feeReciever","type":"address"},
+				{"name":"currentBalance","type":"uint128"},
+				{"name":"distributionFee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "resolveLLCWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "resolveLLCWalletCb",
+			"inputs": [
+				{"name":"addrLLCWallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createJson",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDrawResult",
+			"inputs": [
+				{"name":"result","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withoutCreation",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "goToWallet",
+			"inputs": [
+				{"name":"addrLLCWallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "attachMultisig",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "saveMultisig",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"state","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"bytes"},
+				{"name":"targetAbi","type":"bytes"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

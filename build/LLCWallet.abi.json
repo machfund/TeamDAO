@@ -1,0 +1,61 @@
+{
+	"ABI version": 2,
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"custodians","type":"map(address,uint32)"},
+				{"name":"distributionFee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExt",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"custodians","type":"map(address,uint32)"}
+			]
+		},
+		{
+			"name": "createProposal",
+			"inputs": [
+				{"name":"newCustodians","type":"map(address,uint32)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "vote",
+			"inputs": [
+				{"name":"currentProposalIndex","type":"uint32"},
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getProposals",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"creator","type":"address"},{"name":"oldCustodians","type":"map(address,uint32)"},{"name":"newCustodians","type":"map(address,uint32)"},{"name":"votesFor","type":"uint128"},{"name":"votesAgainst","type":"uint128"},{"name":"votesTotal","type":"uint128"},{"name":"votesNeeded","type":"uint128"},{"name":"start","type":"uint32"},{"name":"end","type":"uint32"}],"name":"value0","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getVotes",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"map(uint32,map(address,bool))"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_id","type":"uint32"}
+	],
+	"events": [
+	]
+}

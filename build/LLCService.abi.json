@@ -1,0 +1,97 @@
+{
+	"ABI version": 2,
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "init",
+			"inputs": [
+				{"name":"codeLLCWallet","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setStaticDeployFee",
+			"inputs": [
+				{"name":"staticDeployFee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDistributionFee",
+			"inputs": [
+				{"name":"distributionFee","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setFeeReciever",
+			"inputs": [
+				{"name":"feeReciever","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployLLCWallet",
+			"inputs": [
+				{"name":"custodians","type":"map(address,uint32)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferFees",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getExt",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"staticDeployFee","type":"uint128"},
+				{"name":"deployedWalletsCounter","type":"uint32"},
+				{"name":"addrAdmin","type":"address"},
+				{"name":"feeReciever","type":"address"},
+				{"name":"currentBalance","type":"uint128"},
+				{"name":"distributionFee","type":"uint128"}
+			]
+		},
+		{
+			"name": "resolveLLCWallet",
+			"inputs": [
+				{"name":"addrAuthor","type":"address"},
+				{"name":"id","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"addrLLCWallet","type":"address"}
+			]
+		},
+		{
+			"name": "resolveLLCWalletCodeHash",
+			"inputs": [
+				{"name":"addrAuthor","type":"address"}
+			],
+			"outputs": [
+				{"name":"codeHashLLCWallet","type":"uint256"}
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_addrAdmin","type":"address"}
+	],
+	"events": [
+	]
+}
